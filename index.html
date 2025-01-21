@@ -17,12 +17,14 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
+            position: relative;
         }
 
         .scrolling-text {
             white-space: nowrap;
             overflow: hidden;
             position: absolute;
+            top: 10%;
             width: 100%;
         }
 
@@ -40,11 +42,42 @@
                 transform: translateX(-100%);
             }
         }
+
+        .rug-animation {
+            position: relative;
+            width: 200px;
+            height: 100px;
+            background: linear-gradient(90deg, gray, darkgray);
+            border: 2px solid white;
+            animation: pull 3s ease-in-out infinite;
+        }
+
+        .rug-animation::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            z-index: 1;
+        }
+
+        @keyframes pull {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
     </style>
 </head>
 <body>
     <div class="scrolling-text">
         <span>when will the rug be pulled? &nbsp; when will the rug be pulled? &nbsp; when will the rug be pulled?</span>
     </div>
+    <div class="rug-animation"></div>
 </body>
 </html>
