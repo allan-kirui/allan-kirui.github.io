@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Official RugPull Token website">
+    <title>RugPull Token</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .scrolling-text {
+            white-space: nowrap;
+            overflow: hidden;
+            position: absolute;
+            width: 100%;
+        }
+
+        .scrolling-text span {
+            display: inline-block;
+            animation: scroll 10s linear infinite;
+            font-size: 2rem;
+        }
+
+        @keyframes scroll {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="scrolling-text">
+        <span>when will the rug be pulled? &nbsp; when will the rug be pulled? &nbsp; when will the rug be pulled?</span>
+    </div>
+</body>
+</html>
